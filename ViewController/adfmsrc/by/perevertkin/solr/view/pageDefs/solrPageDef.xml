@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1" id="solrPageDef"
+                Package="by.perevertkin.solr.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ArticlesView1" RangeSize="10" DataControl="AppModuleDataControl" id="ArticlesView1Iterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="getAm" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getAm"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="data.AppModuleDataControl.dataProvider"
+                  ReturnName="data.AppModuleDataControl.methodResults.getAm_AppModuleDataControl_dataProvider_getAm_result"/>
+    <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action IterBinding="ArticlesView1Iterator" id="byContentExecute" InstanceName="AppModuleDataControl.ArticlesView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="contentVar" NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>
