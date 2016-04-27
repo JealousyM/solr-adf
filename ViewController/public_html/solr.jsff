@@ -3,8 +3,9 @@
           xmlns:f="http://java.sun.com/jsf/core">
   <af:panelGroupLayout id="pgl2" layout="vertical">
     <af:panelGroupLayout id="pgl1">
-      <af:button text="Generate data" id="b1" actionListener="#{pageFlowScope.solrBean.generateData}"/>
-      <af:inputText label="content" id="it1" binding="#{pageFlowScope.solrBean.content}" partialTriggers="b2"
+      <af:button text="generate data" id="b1" actionListener="#{pageFlowScope.solrBean.generateData}"/>
+      <af:button text="index data" id="b4" actionListener="#{pageFlowScope.solrBean.indexData}"/>
+      <af:inputText label="content" id="it1" binding="#{pageFlowScope.solrBean.content}" partialTriggers="b2 b3"
                     autoSubmit="true"/>
       <af:button text="standart search" id="b2" actionListener="#{pageFlowScope.solrBean.standartSearch}"
                  partialSubmit="true"/>
@@ -14,6 +15,6 @@
       </f:facet>
     </af:panelGroupLayout>
     <af:spacer width="10" height="10" id="s2"/>
-    <af:outputText value="" id="ot1" binding="#{pageFlowScope.solrBean.tookTime}" partialTriggers="b2"/>
+    <af:outputText value="" id="ot1" binding="#{pageFlowScope.solrBean.tookTime}" partialTriggers="b2 b3 b4"/>
   </af:panelGroupLayout>
 </jsp:root>
