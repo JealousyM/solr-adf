@@ -4,7 +4,6 @@
   <af:panelGroupLayout id="pgl2" layout="vertical">
     <af:panelGroupLayout id="pgl1">
       <af:button text="Generate data" id="b1" actionListener="#{pageFlowScope.solrBean.generateData}"/>
-      <af:button text="Index data" id="b4" actionListener="#{pageFlowScope.solrBean.indexData}"/>
       <af:inputText label="content" id="it1" binding="#{pageFlowScope.solrBean.content}" partialTriggers="b2"
                     autoSubmit="true"/>
       <af:button text="standart search" id="b2" actionListener="#{pageFlowScope.solrBean.standartSearch}"
