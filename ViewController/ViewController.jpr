@@ -263,42 +263,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Apache-solr-solrj-4.0.0.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons-codec-1.3.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons-httpclient-3.1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons-io-2.1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Httpclient-4.1.3.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Jcl-over-slf4j-1.6.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Slf4j-api-1.6.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Slf4j-jdk14-1.6.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Solr-solrj-1.4.0.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Oracle JEWT"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -334,88 +298,150 @@
             <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Commons-io-2.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Httpclient-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Httpcore-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Httpmime-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jcl-over-slf4j-1.7.7.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Noggit-0.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Slf4j-api-1.7.7.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Solr-solrj-6.0.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Stax2-api-3.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Woodstox-core-asl-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Zookeeper-3.4.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <hash n="internalDefinitions">
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url path="../libs/apache-solr-solrj-4.0.0.jar" jar-entry=""/>
+                  <url path="../libs/commons-io-2.4.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Apache-solr-solrj-4.0.0.jar"/>
-               <value n="id" v="Apache-solr-solrj-4.0.0.jar"/>
+               <value n="description" v="Commons-io-2.4.jar"/>
+               <value n="id" v="Commons-io-2.4.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/commons-codec-1.3.jar" jar-entry=""/>
+                  <url path="../libs/httpclient-4.4.1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Commons-codec-1.3.jar"/>
-               <value n="id" v="Commons-codec-1.3.jar"/>
+               <value n="description" v="Httpclient-4.4.1.jar"/>
+               <value n="id" v="Httpclient-4.4.1.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/commons-httpclient-3.1.jar" jar-entry=""/>
+                  <url path="../libs/httpcore-4.4.1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Commons-httpclient-3.1.jar"/>
-               <value n="id" v="Commons-httpclient-3.1.jar"/>
+               <value n="description" v="Httpcore-4.4.1.jar"/>
+               <value n="id" v="Httpcore-4.4.1.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/commons-io-2.1.jar" jar-entry=""/>
+                  <url path="../libs/httpmime-4.4.1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Commons-io-2.1.jar"/>
-               <value n="id" v="Commons-io-2.1.jar"/>
+               <value n="description" v="Httpmime-4.4.1.jar"/>
+               <value n="id" v="Httpmime-4.4.1.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/httpclient-4.1.3.jar" jar-entry=""/>
+                  <url path="../libs/jcl-over-slf4j-1.7.7.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Httpclient-4.1.3.jar"/>
-               <value n="id" v="Httpclient-4.1.3.jar"/>
+               <value n="description" v="Jcl-over-slf4j-1.7.7.jar"/>
+               <value n="id" v="Jcl-over-slf4j-1.7.7.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/jcl-over-slf4j-1.6.4.jar" jar-entry=""/>
+                  <url path="../libs/noggit-0.6.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Jcl-over-slf4j-1.6.4.jar"/>
-               <value n="id" v="Jcl-over-slf4j-1.6.4.jar"/>
+               <value n="description" v="Noggit-0.6.jar"/>
+               <value n="id" v="Noggit-0.6.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/slf4j-api-1.6.4.jar" jar-entry=""/>
+                  <url path="../libs/slf4j-api-1.7.7.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Slf4j-api-1.6.4.jar"/>
-               <value n="id" v="Slf4j-api-1.6.4.jar"/>
+               <value n="description" v="Slf4j-api-1.7.7.jar"/>
+               <value n="id" v="Slf4j-api-1.7.7.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/slf4j-jdk14-1.6.4.jar" jar-entry=""/>
+                  <url path="../libs/solr-solrj-6.0.0.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Slf4j-jdk14-1.6.4.jar"/>
-               <value n="id" v="Slf4j-jdk14-1.6.4.jar"/>
+               <value n="description" v="Solr-solrj-6.0.0.jar"/>
+               <value n="id" v="Solr-solrj-6.0.0.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../libs/solr-solrj-1.4.0.jar" jar-entry=""/>
+                  <url path="../libs/stax2-api-3.1.4.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Solr-solrj-1.4.0.jar"/>
-               <value n="id" v="Solr-solrj-1.4.0.jar"/>
+               <value n="description" v="Stax2-api-3.1.4.jar"/>
+               <value n="id" v="Stax2-api-3.1.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../libs/woodstox-core-asl-4.4.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Woodstox-core-asl-4.4.1.jar"/>
+               <value n="id" v="Woodstox-core-asl-4.4.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../libs/zookeeper-3.4.6.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Zookeeper-3.4.6.jar"/>
+               <value n="id" v="Zookeeper-3.4.6.jar"/>
                <value n="locked" v="true"/>
             </hash>
          </list>
@@ -494,42 +520,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Apache-solr-solrj-4.0.0.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons-codec-1.3.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons-httpclient-3.1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons-io-2.1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Httpclient-4.1.3.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Jcl-over-slf4j-1.6.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Slf4j-api-1.6.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Slf4j-jdk14-1.6.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Solr-solrj-1.4.0.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Oracle JEWT"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -563,6 +553,50 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-io-2.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Httpclient-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Httpcore-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Httpmime-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jcl-over-slf4j-1.7.7.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Noggit-0.6.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Slf4j-api-1.7.7.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Solr-solrj-6.0.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Stax2-api-3.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Woodstox-core-asl-4.4.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Zookeeper-3.4.6.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

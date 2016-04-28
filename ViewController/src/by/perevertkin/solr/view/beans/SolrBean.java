@@ -8,24 +8,21 @@ import by.perevertkin.solr.view.utils.ADFUtils;
 import java.io.IOException;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 
 import java.util.Date;
-import java.util.logging.Level;
 
 import javax.faces.event.ActionEvent;
 
 import oracle.adf.share.logging.ADFLogger;
-import oracle.adf.share.perf.Timer;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.output.RichOutputText;
 
 import oracle.binding.OperationBinding;
 
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.client.solrj.impl.CommonsHttpSolrServer;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.SolrInputDocument;
@@ -71,22 +68,22 @@ public class SolrBean {
         logger.warning("getAm().getArticlesView1() count:" + getAm().getArticlesView1().getEstimatedRowCount());
         Date dateEnd = new Date(System.currentTimeMillis());
         long searchTime = dateEnd.getTime() - dateBegin.getTime();
-        tookTime.setValue("standartSearch tookTime:" + searchTime);
+        tookTime.setValue("standartSearch tookTime:" + searchTime +" ms");
     }
 
     public void solrSearch(ActionEvent actionEvent) {
         Date dateBegin = new Date(System.currentTimeMillis());
         logger.warning("content:" + content.getValue());
-        SolrServer server;
+        SolrClient  solr;
         String queryString = (String) (content.getValue() != null ? content.getValue() : "*:*");
         logger.warning("queryString:" + queryString);
         try {
-            server = new CommonsHttpSolrServer("http://localhost:8983/solr");
+            solr = new HttpSolrClient("http://localhost:8983/solr/article_core");
 
             SolrQuery query = new SolrQuery();
-            query.setQuery(queryString);
+            query.setQuery("content:"+queryString);
             query.setRows(RECORDS_COUNT);
-            QueryResponse rsp = server.query(query);
+            QueryResponse rsp = solr.query(query);
             SolrDocumentList docs = rsp.getResults();
 
             Date dateEnd = new Date(System.currentTimeMillis());
@@ -108,19 +105,18 @@ public class SolrBean {
 
     public void indexData(ActionEvent actionEvent) {
         Date dateBegin = new Date(System.currentTimeMillis());
-        SolrServer server;
+        SolrClient  solr;
         try {
-            server = new CommonsHttpSolrServer("http://localhost:8983/solr");
-            //getAm().getArticlesView1().getEstimatedRowCount()
+            solr = new HttpSolrClient("http://localhost:8983/solr/article_core");
             getAm().getArticlesView1().first();
-            for (int i = 0; i <= 500; i++) {
+            for (int i = 0; i <= getAm().getArticlesView1().getEstimatedRowCount(); i++) {
                 ArticlesViewRowImpl row = (ArticlesViewRowImpl) getAm().getArticlesView1().getCurrentRow();
                 SolrInputDocument doc = new SolrInputDocument();
                 doc.addField("id", row.getId());
                 doc.addField("title", row.getTitle());
                 doc.addField("content", row.getContent());
-                server.add(doc);
-                server.commit();
+                solr.add(doc);
+                solr.commit();
                 getAm().getArticlesView1().next();
             }
             } catch (MalformedURLException e) {
@@ -132,7 +128,7 @@ public class SolrBean {
             }
         Date dateEnd = new Date(System.currentTimeMillis());
         long indexTime = dateEnd.getTime() - dateBegin.getTime();
-        tookTime.setValue("index data tookTime:" + indexTime);
+        tookTime.setValue("index data tookTime:" + indexTime +" ms");
     }
     
     public void setTookTime(RichOutputText tookTime) {
